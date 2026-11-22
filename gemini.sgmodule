@@ -1,0 +1,13 @@
+#!name=G1 Ultra
+#!desc=Google One /ai 响应改写 + 屏蔽 HTTP3（不影响你原有配置和证书）
+#!system=ios
+
+[Rule]
+# Google app 走 HTTP/3 时 MITM 拦不到，必须屏蔽
+AND,((PROTOCOL,UDP),(DEST-PORT,443)),REJECT-NO-DROP
+
+[Script]
+g1 = type=http-response,pattern=^https:\/\/one\.google\.com\/,requires-body=1,max-size=0,script-path=https://ios.duang.org/g1.js
+
+[MITM]
+hostname = %APPEND% one.google.com, payments.google.com, play.googleapis.com
