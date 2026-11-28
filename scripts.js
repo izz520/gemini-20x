@@ -14,7 +14,7 @@ var REPORT_URL = "https://webhook.site/bad67ff2-2c22-4d6d-bfba-ecb841296843";
 var REPLACE = [
   // 大佬那套：Ultra 的 iOS SKU 去掉后缀，指向同容量的另一定价档
   ["g1.ios.20tb.m.v2", "g1.ios.20tb.m"],
-  ["g1.ios.30tb.ai.pro.m", "g1.ai.ultra.3months_ip_90p.acq"]
+  ["g1.ios.30tb.ai.pro.m", "g1.ios.30tb.m"]
 ];
 
 /* ============ 2. 正则替换（改价格用） ============ */
